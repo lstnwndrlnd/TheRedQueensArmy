@@ -9,5 +9,13 @@
 #'
 # shift + cmd + d
 # or roxygen::roxygenise()
-
+SamplingDist <- function(samples = 50, sample_size = 100,
+                         mean = 0, sd = 5){
+  sampleMeans <- rep(NA, samples)
+  for(i in 1:samples){
+    x <-rnorm(sample_size, mean = mean, sd = sd)
+    sampleMeans[i] <- mean(x)
+  }
+  return(sampleMeans)
+}
 
