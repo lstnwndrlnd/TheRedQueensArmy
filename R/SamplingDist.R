@@ -14,6 +14,9 @@ SamplingDist <- function(samples = 50, sample_size = 100,
   if(samples <= 0){
     stop(paste0("the number of samples needs to be greater than 0"))
   }
+  if(sd <= 0){
+    stop(paste0("the standard deviation needs to be greater than 0"))
+  }
   sampleMeans <- rep(NA, samples)
   for(i in 1:samples){
     x <-rnorm(sample_size, mean = mean, sd = sd)
