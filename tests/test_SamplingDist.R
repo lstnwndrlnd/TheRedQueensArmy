@@ -1,4 +1,3 @@
-
 context("Testing SamplingDist")
 
 test_that("length of SamplingDist does not matche the parameter", {
@@ -21,3 +20,4 @@ test_that("Error messages are not working properly",{
   testthat::expect_error(SamplingDist(sd = 0)
                          , "The standard devaition cannot be != 0")
 })
+
